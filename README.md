@@ -3,21 +3,25 @@ Predicting StakeOverFlow with Linear Model
 In this notebook we will be predicting tags for post in StakeOverflow and will be using multilabel classifier approch.
 
 1. **Importing the Python Librarie**
+
 - Numpy — a package for scientific computing.
 - Pandas — a library providing high-performance, easy-to-use data structures and data analysis tools for the Python
 - scikit-learn — a tool for data mining and data analysis.
 - NLTK — a platform to work with natural language.
 
 2. **Text Processing**
-In this task you will deal with a dataset of post titles from StackOverflow. You are provided a split to 3 sets: train, validation and test. All corpora (except for test) contain titles of the posts and corresponding tags (100 tags are available). 
+
+    In this task you will deal with a dataset of post titles from StackOverflow. You are provided a split to 3 sets: train, validation and test. All corpora (except for test) contain titles of the posts and corresponding tags (100 tags are available). 
 
 3. **Convert our text data into Vector format**
-Machine Learning algorithms work with numeric data and we cannot use the provided text data "as is". There are many ways to transform text data to numeric vectors. In this task you will try to use two of them.
+
+    Machine Learning algorithms work with numeric data and we cannot use the provided text data "as is". There are many ways to transform text data to numeric vectors. In this task you will try to use two of them.
 
 **Bag of words**
-One of the well-known approaches is a bag-of-words representation. To create this transformation, follow the steps:
 
-Find N most popular words in train corpus and numerate them. Now we have a dictionary of the most popular words.
+    One of the well-known approaches is a bag-of-words representation. To create this transformation, follow the steps:
+
+   Find N most popular words in train corpus and numerate them. Now we have a dictionary of the most popular words.
 For each title in the corpora create a zero vector with the dimension equals to N.
 For each text in the corpora iterate over words which are in the dictionary and increase by 1 the corresponding coordinate.
 Let's try to do it for a toy example. Imagine that we have N = 4 and the list of the most popular words is
@@ -42,10 +46,13 @@ And interate over all words, and if the word is in the dictionary, we increase t
 'how': [1, 0, 0, 0] # word 'how' is not in our dictionary
 'are': [1, 0, 0, 1]
 'you': [1, 1, 0, 1]
-Transforming text to a vector
+
+**Transforming text to a vector**
+
 Machine Learning algorithms work with numeric data and we cannot use the provided text data "as is". There are many ways to transform text data to numeric vectors. In this task you will try to use two of them.
 
-Bag of words
+**Bag of words**
+
 One of the well-known approaches is a bag-of-words representation. To create this transformation, follow the steps:
 
 Find N most popular words in train corpus and numerate them. Now we have a dictionary of the most popular words.
